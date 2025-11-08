@@ -23,3 +23,27 @@ about the methods and the way of calculating. The method TestMinus seemed
 a little enifficient, so I was wondering if there was a way to make better.
 Checking each method and how to make it less naive.
 
+26. 
+
+Initial State:      0   0   ' '
+clear:              0   0   ' '
+numberPressed(3);:  3   0   ' '
+numberPressed(4);:  4   0   ' '
+equals();:          4   4   ' '
+getDisplayValue();: 4   4   ' '
+
+Since there is no operator, the equal value is the latest number pressed
+(numberPressed(4))
+
+27. Yes, because previousOperator method doesn't do anything wrong when
+the operator is null.
+
+28. No, it doesn't clear everything, it only clears dysplayValue.
+Consequently, the calculation is false on the second call.
+
+29. Changes in the clear method should be made, it should now clear
+the previousOperator to ' ' and the leftOperand to 0 in addition.
+
+30. The result should be 6. Yes, the engine does everything correctly. 
+
+

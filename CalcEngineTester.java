@@ -27,6 +27,8 @@ public class CalcEngineTester
         System.out.println("The result is: " + testPlus());
         System.out.println("Testing the subtraction operation.");
         System.out.println("The result is: " + testMinus());
+        System.out.println("Testing the combination operation.");
+        System.out.println("The result is: " + testCombine());
         System.out.println("All tests passed.");
     }
 
@@ -61,6 +63,19 @@ public class CalcEngineTester
         engine.numberPressed(4);
         engine.equals();
         // Return the result, which should be 5.
+        return engine.getDisplayValue();
+    }
+    
+    public int testCombine()
+    {
+        engine.clear();
+        engine.numberPressed(9);
+        engine.plus();
+        engine.numberPressed(1);
+        engine.minus();
+        engine.numberPressed(4);
+        engine.equals();
+        
         return engine.getDisplayValue();
     }
 }

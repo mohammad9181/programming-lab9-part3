@@ -39,7 +39,7 @@ public class CalcEngine
      */
     public void numberPressed(int number)
     {
-        displayValue = displayValue * 10 + number;
+        displayValue = number; //displayValue * 10 + number;
     }
 
     /**
@@ -70,9 +70,14 @@ public class CalcEngine
         if(previousOperator == '+') {
             displayValue = leftOperand + displayValue;
         }
-        else {
+        else if(previousOperator == '-')
+        {
             displayValue = leftOperand - displayValue;
         }
+        
+        //else {
+          //  displayValue = leftOperand - displayValue;
+        //}
         leftOperand = 0;
     }
 
@@ -82,6 +87,8 @@ public class CalcEngine
     public void clear()
     {
         displayValue = 0;
+        leftOperand = 0;
+        previousOperator = ' ';
     }
 
     /**
